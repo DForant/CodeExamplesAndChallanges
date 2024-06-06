@@ -1,3 +1,12 @@
+/******************************
+ * IPv4 validator
+ * Dean Forant - 06/05/2024
+ * 
+ * The isValidIPv4 function takes in a value that is
+ * then checked via different logic to determine if the entered
+ * value is a valid IPv4 address or not. 
+ * Returns a boolean value
+ ******************************/
 function caesarCipher(str, shift) {
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     shift = shift % 26; // The modulo ensures the shift wraps around the alphabet
