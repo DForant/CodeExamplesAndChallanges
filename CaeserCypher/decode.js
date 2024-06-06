@@ -2,10 +2,13 @@
  * IPv4 validator
  * Dean Forant - 06/05/2024
  * 
- * The isValidIPv4 function takes in a value that is
- * then checked via different logic to determine if the entered
- * value is a valid IPv4 address or not. 
- * Returns a boolean value
+ * The Caesar Cypher is not a very secure cipher but it is a fun project to do with Javascript
+ * To encode a message we pass in a string and a positive shift number. The shift number is used to shift
+ * the starting pont in the aphabet when encoding the message. for example a shift of 1 would cause the 
+ * cypher to start at the 3rd position in the alphabet. Eg A would become D, and B would become E.
+ * So a encoded message 'Hello World' would be encoded to 'Khoor Zruog' (Which kinda sounds like Klingon to me :) )
+ * Additionally, we can decode a message using the same shift number that was used to encode it but insted put it
+ * as a negative number 
  ******************************/
 function caesarCipher(str, shift) {
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
