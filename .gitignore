@@ -1,2 +1,5 @@
 *.code-workspace
 .vscode
+**/ror
+**/roomofrequirement
+**/node_modules
