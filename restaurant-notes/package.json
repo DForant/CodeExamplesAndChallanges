@@ -8,5 +8,10 @@
   "keywords": [],
   "author": "Dean Forant",
   "license": "ISC",
-  "description": "A simple CRUD API using Node, Express and JSON"
+  "description": "A simple CRUD API using Node, Express and JSON",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "fs": "^0.0.1-security"
+  }
 }
