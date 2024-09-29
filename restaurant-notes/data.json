@@ -1,0 +1,29 @@
+[
+    {
+    "name": "Taste Of Italy",
+    "address": "1302 Atwood Ave",
+    "city": "Johnston",
+    "state": "RI",
+    "zip": "02919",
+    "urls": [
+        "https://www.tasteofitalydeli.com/",
+        "https://www.facebook.com/profile.php?id=100092223423719"
+    ],
+    "HoursOfOperation":
+    {
+        "Sunday": "10:00am - 4:00pm",
+        "Monday": "10:00am - 6:00pm",
+        "Tuesday": "10:00am - 6:00pm",
+        "Wednesday": "10:00am - 6:00pm",
+        "Thursday": "10:00am - 6:00pm",
+        "Friday": "10:00am - 6:00pm",
+        "Saturday": "10:00am - 4:00pm"
+        
+    },
+    "notes": [
+        "Great Italian deli with a wide selection of meats, cheeses, and prepared foods.",
+        "The staff is friendly and helpful.",
+        "They have a small dining area where you can enjoy a sandwich or a slice of pizza."
+    ]
+    }
+]
