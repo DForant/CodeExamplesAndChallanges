@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const {v4: uuidv4} = require('uuid');
 const app = express();
 const PORT = 3000;
 
@@ -10,13 +11,21 @@ app.use(bodyParser.json());
 
 // Read data from file
 const readData = () => {
-    const data = fs.readFileSync('data.json');
-    return JSON.parse(data);
+    try{
+        const data = fs.readFileSync('data.json');
+        return JSON.parse(data);
+    } catch (error){
+        console.log('Error reading fie', error);
+    }
 }
 
 // Write data to file
 const writeData = (data) => {
-    fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
+    try{
+        fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
+    } catch (error) {
+        console.error('Error writing to file', error);
+    }
 }
 
 // Routes
@@ -42,15 +51,17 @@ app.get('/restaurants/:id', (req, res) => {
 // Add a new restaurant
 app.post('/restaurants', (req, res) => {
     const data = readData();
-    data.push(req.body);
+    const newRestaurant = req.body;
+    newRestaurant.id = uuidv4();
+    data.push(newRestaurant);
     writeData(data);
-    res.json(data);
+    res.status(201).json(newRestaurant);
 });
 
 // Update a restaurant
 app.put('/restaurants/:id', (req, res) => {
     const data = readData();
-    const {id} = req.params.id;
+    const {id} = req.params;
     const updateResturant = req.body;
     const index = data.findIndex(r => r.id === id);
     if(index !== -1){

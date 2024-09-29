@@ -14,7 +14,8 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "express": "^4.21.0",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
