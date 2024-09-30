@@ -62,12 +62,12 @@ app.post('/restaurants', (req, res) => {
 app.put('/restaurants/:id', (req, res) => {
     const data = readData();
     const {id} = req.params;
-    const updateResturant = req.body;
+    const updateRestaurant = req.body;
     const index = data.findIndex(r => r.id === id);
     if(index !== -1){
-        data[index] = updateResturant;
+        data[index] = { ...data[index], ...updateRestaurant };
         writeData(data);
-        res.json(updateResturant);
+        res.json(data[index]);
     } else {
         res.status(404).json({message: 'Restaurant Not found' });
     }
